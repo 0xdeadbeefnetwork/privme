@@ -1,6 +1,18 @@
 #include <windows.h>
 #include <iostream>
 #include <tlhelp32.h>
+/*
+To compile on Linux an exe (lol) 
+
+x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++   priv.cpp -o priv.exe
+
+Sets SE_DEBUG on self for dumping of procs.
+Picks SYSTEM token. (0)
+Snapshot + dump token.
+Clones it.
+Opens new proc with it.
+*/
+
 
 // Function to display ASCII art of a cat
 void displayCatArt() {
